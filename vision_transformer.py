@@ -39,7 +39,9 @@ class ConvStemConfig(NamedTuple):
     norm_layer: Callable[..., nn.Module] = nn.BatchNorm2d
     activation_layer: Callable[..., nn.Module] = nn.ReLU
 
-
+"""
+vision transformer网络框架：Linear Projection (Patch + Position 的Embedding层)、Transformer Encoder和MLP Head（分类层）三大部分组成
+"""
 class MLPBlock(MLP):
     """Transformer MLP block.
      in_dim（输入特征的维度）、mlp_dim（隐藏层的维度）和dropout（dropout概率，用于防止过拟合）
